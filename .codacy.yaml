@@ -1,4 +1,0 @@
----
-engines:
-  brakeman:
-    base_sub_dir: src/main/resources/docs/directory-tests/rails4
