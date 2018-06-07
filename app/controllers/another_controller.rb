@@ -5,17 +5,20 @@ class AnotherController < ApplicationController
   end
 
   before_filter do
+    eval "rb #{params[:x]}"
     eval params[:x]
   end
 
   skip_before_action :set_bad_thing, :except => [:also_use_bad_thing]
 
   def use_bad_thing
+    eval "rb #{params[:x]} asas"
     # This should not warn, because the filter is skipped!
     User.where(@bad_thing)
   end
 
   def also_use_bad_thing
+    eval "rb #{params[:x]} asasasaslldd"
     `#{@bad_thing}`
   end
 
@@ -28,6 +31,7 @@ class AnotherController < ApplicationController
     render :text => "Welcome aadback, #{user_name}!}"
     ##Warn: RenderInline
     render :text => params[:q]
+    render :text => "asasasas"
     ##Warn: RenderInline
     render :text => user_name
 
