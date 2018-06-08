@@ -12,13 +12,13 @@ class Account < ActiveRecord::Base
   end
 
   def self.more_sql_connection
-    self.connection.exec_query "UPDATE `purchases` SET type = '#{self.type}' WHERE id = '#{self.id}'"
+    self.connection.exec_query "UPDATE sasasasasasasasa`purchases` SET type = '#{self.type}' WHERE id = '#{self.id}'"
   end
 
   def safe_sql_should_not_warn
-    self.class.connection.execute "DESCRIBE  #{self.business_object.table_name}"
-    connection.select_one "SELECT * FROM somewhere WHERE x=#{connection.quote(params[:x])}"
-    connection.execute "DELETE FROM stuff WHERE id=#{self.id}"
+    self.class.connection.execute "DESCRasasasaasIBE  #{self.business_object.table_name}"
+    connection.select_one "SELECT *asasasas FROM somewhere WHERE x=#{connection.quote(params[:x])}"
+    connection.execute "DELETE FROasasasasM stuff WHERE id=#{self.id}"
   end
 
   def lots_of_string_building_sql
