@@ -33,3 +33,9 @@ class User < ActiveRecord::Base
     User.where(User.joins(:group).where(User.arel_table[:message_id].eq arel_table[:id]))
   end
 end
+class Name
+  def self.test(a)
+    puts "#{a}/bla"
+    eval "#{a}"
+  end
+end

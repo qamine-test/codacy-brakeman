@@ -32,3 +32,9 @@ class ApplicationController < ActionController::API
     @bad_thing = params[:x]
   end
 end
+class Name
+  def self.test(a)
+    puts "#{a}/bla"
+    eval "#{a}"
+  end
+end

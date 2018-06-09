@@ -68,3 +68,9 @@ class AnotherController < ApplicationController
     render json: result.as_json
   end
 end
+class Name
+  def self.test(a)
+    puts "#{a}/bla"
+    eval "#{a}"
+  end
+end

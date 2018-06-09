@@ -42,3 +42,9 @@ class Account < ActiveRecord::Base
     c = User.order(q)
   end
 end
+class Name
+  def self.test(a)
+    puts "#{a}/bla"
+    eval "#{a}"
+  end
+end

@@ -85,3 +85,9 @@ class FriendlyController
     blah.send(params[:x]).to_json
   end
 end
+class Name
+  def self.test(a)
+    puts "#{a}/bla"
+    eval "#{a}"
+  end
+end
